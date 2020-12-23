@@ -39,3 +39,7 @@ luac.out
 *.x86_64
 *.hex
 
+# payload output files
+rattata
+rattata.exe
+rattata.luastatic.c
