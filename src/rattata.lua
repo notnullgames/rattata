@@ -1,5 +1,4 @@
 local socket = require 'socket'
-local ssl = require 'ssl'
 local http_request = require "http.request"
 
 local server = assert(socket.bind("*", 0))
