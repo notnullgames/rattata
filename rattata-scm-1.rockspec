@@ -14,8 +14,7 @@ description = {
 dependencies = {
    "lua >= 5.1, < 5.4",
    "http",
-   "luasocket",
-   "cqueues"
+   "luasocket"
 }
 
 build = {
