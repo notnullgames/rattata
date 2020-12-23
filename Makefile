@@ -6,6 +6,7 @@ help: ## show this help
 setup: ## Install dependencies. Requires luarocks installed.
 	sudo luarocks install luasocket
 	sudo luarocks install luapak
+	sudo luarocks install http
 
 run: ## Run rattata service
 	@luajit src/rattata.lua
