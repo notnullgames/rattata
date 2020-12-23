@@ -13,3 +13,9 @@ This is in the works, and not at all complete.
 ## development
 
 To get started with local development, run `make` to get help about the things you can do.
+
+
+### usage
+
+- Run the server in 1 terminal with `make run` and note the port
+- In another terminal use telnet or netcat to connect and give it a URL of some lua-code (example: `https://pastebin.com/raw/Dzw30h0W`)
