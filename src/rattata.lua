@@ -19,7 +19,6 @@ end
 
 while 1 do
   local client = server:accept()
-  -- client:settimeout(10)
   local url, err = client:receive()
   if not err then client:send("Downloading "..url .. "\n") end
   run(url)
