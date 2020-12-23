@@ -10,4 +10,4 @@ This is in the works, and not at all complete.
 
 ## development
 
-TO get started with local development, run `make setup`
+To get started with local development, run `make` to get help about the things you can do.
