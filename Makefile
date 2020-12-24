@@ -19,4 +19,4 @@ clean: # delete generated files
 	rm -f rattata rattata.luastatic.c
 
 rattata:
-	luastatic src/rattata.lua /usr/lib/x86_64-linux-gnu/libluajit-5.1.a -I/usr/include/luajit-2.1 -static -static-libgcc -static-libstdc++
+	luastatic src/rattata.lua /usr/lib/x86_64-linux-gnu/libluajit-5.1.a -I/usr/include/luajit-2.1
