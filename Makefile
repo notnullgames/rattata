@@ -8,15 +8,15 @@ help: ## show this help
 setup: ## Install dependencies. Requires luarocks installed.
 	sudo luarocks install luasocket
 	sudo luarocks install http
-	sudo luarocks install luapak
+	sudo luarocks install luatastic
 
 run: ## Run rattata service
 	@luajit src/rattata.lua
 
-build: dist/rattata ## compile standalone payload
+build: rattata ## compile standalone payload
 
 clean: # delete generated files
-	rm -rf dist .luapak
+	rm -f rattata rattata.luastatic.c
 
-dist/rattata:
-	luapak make --lua-lib=/usr/lib/x86_64-linux-gnu/libluajit-5.1.so
+rattata:
+	luastatic src/rattata.lua /usr/lib/x86_64-linux-gnu/libluajit-5.1.a -I/usr/include/luajit-2.1 -static -static-libgcc -static-libstdc++
