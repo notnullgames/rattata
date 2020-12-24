@@ -1,5 +1,4 @@
 local socket = require 'socket'
-local http_request = require 'http.request'
 
 local server = assert(socket.bind('*', 0))
 local ip, port = server:getsockname()
@@ -8,13 +7,7 @@ print('Please telnet to localhost on port ' .. port .. '. Give it a URL to downl
 
 
 function run(url)
-  local headers, stream = assert(http_request.new_from_uri(url):go())
-  local body = assert(stream:get_body_as_string())
-  if headers:get ':status' ~= '200' then
-    error(body)
-  end
-  local f = loadstring(body)
-  return f()
+  print("You asked for "..url)
 end
 
 while 1 do

@@ -40,5 +40,4 @@ luac.out
 *.hex
 
 # payload output files
-rattata
-rattata.luastatic.c
+dist
