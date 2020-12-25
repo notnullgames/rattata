@@ -33,5 +33,5 @@ To make payloads for different operating systems:
 ./mgit bundle -z -a --all -m --all -M rattata.main -o dist/linux/x64/rattata
 ```
 
-Checkout [the docs](https://luapower.com/bundle) for more info about bundling. Eventually, I will setup tuned targets for differnt OS's.
-mgit source code can be located [here](https://github.com/capr/mgit).
+- Checkout [the docs](https://luapower.com/bundle) for more info about bundling. Eventually, I will setup tuned targets for differnt OS's.
+- mgit source code can be located [here](https://github.com/capr/mgit).
