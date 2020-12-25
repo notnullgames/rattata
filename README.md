@@ -34,3 +34,4 @@ To make payloads for different operating systems:
 ```
 
 Checkout [the docs](https://luapower.com/bundle) for more info about bundling. Eventually, I will setup tuned targets for differnt OS's.
+mgit source code can be located [here](https://github.com/capr/mgit).
