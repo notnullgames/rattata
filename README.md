@@ -9,7 +9,7 @@ To get started, install [rustup](https://rustup.rs/). You should also run `cargo
 
 ## NOTES
 
-- runtime has a reserved string for the onion address of the manager. leave off `.onion`. It's 56 characters long, padded with spaces, and you can find it with `ONION_ADDRESS` in the binary. This is how the manager address is hard-coded without re-compiling.
+- runtime has a reserved string for the onion address of the manager. leave off `.onion`. It's 56 characters long, padded with spaces, and you can find it with `ONION_ADDRESS` in the binary. This is how the manager address is hard-coded without re-compiling. Another idea: use filename or even CLI param to set call-back address. BadUSB script could acocunt for param, installing it stealth, etc.
 
 ## TODO
 
