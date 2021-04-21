@@ -1,8 +1,8 @@
-# rattata
-
 ![rattata](./logo.png)
 
-This is some ideas round using rust for [rattata](https://github.com/notnullgames/rattata).
+# rattata
+
+This is the trainer/rattata (payload) system for [pakemon](https://github.com/notnullgames/pakemon).
 
 To get started, install [rustup](https://rustup.rs/). You should also run `cargo install cross`. You will also need docker & make installed.
 
