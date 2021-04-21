@@ -1,37 +1,23 @@
 # rattata
 
-![rattata](https://cdn.bulbagarden.net/upload/thumb/4/46/019Rattata.png/500px-019Rattata.png)
+![rattata](./logo.png)
 
-lua-based Command and Control framework
+This is some ideas round using rust for [rattata](https://github.com/notnullgames/rattata).
 
-This is the server + framework for post-exploitation.
-
-# WIP
-
-This is in the works, and not at all complete.
+To get started, install [rustup](https://rustup.rs/). You should also run `cargo install cross`. You will also need docker & make installed.
 
 
-## development
+## NOTES
 
-This is meant to run inside a [luapower](https://luapower.com/) dir-tree.
+- runtime has a reserved string for the onion address of the manager. leave off `.onion`. It's 56 characters long, padded with spaces, and you can find it with `ONION_ADDRESS` in the binary. This is how the manager address is hard-coded without re-compiling.
 
-You can set it up like this:
+## TODO
 
-- Get luapower. Luapower has a few other ways to download the tree (I like using the `mgit` method) so do that however you like. An easy way is to download [a big zip](https://github.com/luapower/all/archive/master.zip) of everything.
-- inside that dir, run `git clone https://github.com/notnullgames/rattata.git` or extract [this zip](https://github.com/notnullgames/rattata/archive/main.zip) to a rattata dir inside the tree.
+This is basically just `helloworld`, now.
 
-
-You can run it (for dev) with this:
-
-```
-./luajit rattata/main.lua
-```
-
-To make payloads for different operating systems:
-
-```
-./mgit bundle -z -a --all -m --all -M rattata.main -o dist/linux/x64/rattata
-```
-
-- Checkout [the docs](https://luapower.com/bundle) for more info about bundling. Eventually, I will setup tuned targets for differnt OS's.
-- mgit source code can be located [here](https://github.com/capr/mgit).
+- create tor tunnel, runtime connects to manager on startup with basic commands (`download` & `exec`)
+- add VFS to store downloaded files & add vfs file management commands (`ls`, `rm`, `cat`) - maybe no dirs, just flat location
+- add a way to inject initial VFS & config (like zip at end of binary)
+- add advanced runtime commands (load this dll, do stuff with it, etc)
+- runtime persistence & hiding
+- setup makefile to only use docker (so no rust toolchain needed.)
