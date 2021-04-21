@@ -16,8 +16,4 @@ To get started, install [rustup](https://rustup.rs/). You should also run `cargo
 This is basically just `helloworld`, now.
 
 - create tor tunnel, runtime connects to manager on startup with basic commands (`download` & `exec`)
-- add VFS to store downloaded files & add vfs file management commands (`ls`, `rm`, `cat`) - maybe no dirs, just flat location
-- add a way to inject initial VFS & config (like zip at end of binary)
-- add advanced runtime commands (load this dll, do stuff with it, etc)
-- runtime persistence & hiding
-- setup makefile to only use docker (so no rust toolchain needed.)
+- write lots of script payloads for persistance, stealth install, etc
