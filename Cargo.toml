@@ -30,5 +30,4 @@ openssl = { version = "0.10", features = ["vendored"] }
 portpicker = "0.1.0"
 
 [dev-dependencies]
-cbindgen = "0.16.0"
 cross = "0.2.1"
