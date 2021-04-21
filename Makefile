@@ -9,7 +9,7 @@ manager: ## run rattata manager
 	cargo run --bin manager
 
 runtime: ## run rattata target runtime
-	cargo run --bin runtime
+	cargo run --bin runtime gymsp6larssfbxrhqmmjg274znaptpzaareglv5wvkgiunpoxfajspid.onion:18414
 
 clean: ## delete all output files
 	cargo clean

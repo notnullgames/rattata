@@ -23,7 +23,7 @@ This is basically just `helloworld`, now.
 ## payload stuff
 
 - need to run intiial command stealth. in rust, this can be done like [this](https://stackoverflow.com/questions/29763647/how-to-make-a-program-that-does-not-display-the-console-window). This could be good for intitial payload that can spawn 'powershell -windowstyle hidden -command YOURCOMMANDS'
-- [this](https://docs.rs/powershell_script/0.1.5/powershell_script/) might be helpful for inline powershell scripts
+- [this](https://github.com/cfsamson/powershell-script) might be helpful for inline powershell scripts
 - use a [template lib](https://blog.logrocket.com/top-3-templating-libraries-for-rust/) to generate install badusb that types in silent commands for loading initial payload (tor+socket, connect to trainer, accept commands)
 - trainer should watch for things like "new rattata" and send it commands to collect info, persist, etc.
 - [this](https://github.com/arrase/Raspiducky) seems to have the most options, and do the most

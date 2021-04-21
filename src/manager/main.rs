@@ -1,6 +1,7 @@
 mod rattata;
-use std::thread::{ sleep };
-use std::time::{ Duration };
+
+use std::thread::sleep;
+use std::time::Duration;
 
 fn main() {
     let (_socket, tor, port) = rattata::start(0);

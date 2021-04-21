@@ -49,6 +49,7 @@ pub fn start(mut port: u16) -> (JoinHandle<()>, JoinHandle<Result<u8, Error>>, u
         .flag(TorFlag::HiddenServiceDir(location()))
         .flag(TorFlag::HiddenServiceVersion(HiddenServiceVersion::V3))
         .flag(TorFlag::Custom("--quiet".into()))
+        // .flag(TorFlag::DataDirectory("/tmp/tor-rust".into()))
         .flag(TorFlag::HiddenServicePort(
             TorAddress::Port(port),
             None.into(),
