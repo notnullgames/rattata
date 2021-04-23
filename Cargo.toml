@@ -8,18 +8,13 @@ autoexamples = false
 autotests = false
 autobenches = false
 
-[lib]
+[[bin]]
+name = "trainer"
+path = "src/trainer/main.rs"
+
+[[bin]]
 name = "rattata"
-path = "src/manager/rattata.rs"
-crate-type = ["cdylib"]
-
-[[bin]]
-name = "manager"
-path = "src/manager/main.rs"
-
-[[bin]]
-name = "runtime"
-path = "src/runtime/main.rs"
+path = "src/rattata/main.rs"
 
 [dependencies]
 libc = "0.2.82"
@@ -29,5 +24,3 @@ log = { version = "0.4", features = ["release_max_level_off"] }
 openssl = { version = "0.10", features = ["vendored"] }
 portpicker = "0.1.0"
 
-[dev-dependencies]
-cross = "0.2.1"
