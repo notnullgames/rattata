@@ -4,7 +4,7 @@ use portpicker::pick_unused_port;
 
 use std::fs::File;
 use std::io::Read;
-use std::net::{SocketAddr, TcpListener, TcpStream};
+use std::net::{Shutdown, SocketAddr, TcpListener, TcpStream};
 use std::thread::{spawn, JoinHandle};
 
 // this makes write work on socket
@@ -24,24 +24,43 @@ pub fn location() -> String {
 }
 
 // handle an incoming request over tor/socket from a rattata
-fn handle_rattata(_stream: TcpStream) {
-    // TODO: actual server here
-    println!("connect by rattata");
-    // let content = "<h1>Howdy, Hacker!</h1>";
-    // let _ = _stream.write(
-    //     format(format_args!(
-    //         "HTTP/1.1 200 OK\nContent-Type: text/html\nContent-Length: {}\nConnection: close\n\n{}",
-    //         content.len(),
-    //         content
-    //     ))
-    //     .as_bytes(),
-    // );
+fn handle_rattata(mut stream: TcpStream) {
+    println!("connect by rattata: {}", stream.peer_addr().unwrap());
+    let mut data = [0 as u8; 50]; // using 50 byte buffer
+    while match stream.read(&mut data) {
+        Ok(size) => {
+            stream.write(&data[0..size]).unwrap();
+            true
+        }
+        Err(_) => {
+            println!(
+                "An error occurred, terminating connection with {}",
+                stream.peer_addr().unwrap()
+            );
+            stream.shutdown(Shutdown::Both).unwrap();
+            false
+        }
+    } {}
 }
 
 // handle an incoming request over socket from pakemon
-fn handle_pakemon(_stream: TcpStream) {
-    // TODO: actual server here
-    println!("connect by pakemon");
+fn handle_pakemon(mut stream: TcpStream) {
+    println!("connect by pakemon: {}", stream.peer_addr().unwrap());
+    let mut data = [0 as u8; 50]; // using 50 byte buffer
+    while match stream.read(&mut data) {
+        Ok(size) => {
+            stream.write(&data[0..size]).unwrap();
+            true
+        }
+        Err(_) => {
+            println!(
+                "An error occurred, terminating connection with {}",
+                stream.peer_addr().unwrap()
+            );
+            stream.shutdown(Shutdown::Both).unwrap();
+            false
+        }
+    } {}
 }
 
 // start a tor server & the local service connected to it
