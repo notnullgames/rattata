@@ -2,7 +2,7 @@
 
 <img src="logo.png" alt="rattata" align="right" />
 
-This is the trainer/rattata (payload) system for [pakemon](https://github.com/notnullgames/pakemon). See [this](https://github.com/notnullgames/pakemon/wiki/Projects) for a full breakdown of the Pakémon ecosystem.
+This is the target-system rattata (payload) system for [pakemon](https://github.com/notnullgames/pakemon). See [this](https://github.com/notnullgames/pakemon/wiki/Projects) for a full breakdown of the Pakémon ecosystem.
 
 To get started, install [rustup](https://rustup.rs/). You should also run `cargo install cross`. You will also need docker & make installed.
 
